@@ -78,7 +78,7 @@ FrequencyBodyGyroscopeJerkMagnitudeMean()     |  mean of fBodyBodyGyroJerkMag-me
 FrequencyBodyGyroscopeJerkMagnitudeSTD()      |  mean of fBodyBodyGyroJerkMag-std()
 
 
-The `run_analysis.R` script performs the data preparation and then followed by the 5 steps required as described in the course project’s definition.
+The `run_analysis.R` script performs the data preparation and then followed by the 5 steps required as described in the course project's definition.
 
 Transformations
 ---------------
@@ -96,13 +96,13 @@ Transformations
     - `xtest <- test/X_test.txt` : 2947 rows, 561 columns
           contains recorded features test data
     - `ytest <- test/y_test.txt` : 2947 rows, 1 columns
-          contains test data of activities’code labels
+          contains test data of activities'code labels
     - `subject_train <- test/subject_train.txt` : 7352 rows, 1 column
           contains train data of 21/30 volunteer subjects being observed
     - `xtrain <- test/X_train.txt` : 7352 rows, 561 columns
           contains recorded features train data
     - `ytrain <- test/y_train.txt` : 7352 rows, 1 columns
-          contains train data of activities’code labels
+          contains train data of activities'code labels
 
 3. Merges the training and the test sets to create one data set
     - `data_train` (7352 rows, 563 columns) is created by merging `ytrain`, `subject_train` and `xtrain`               using `cbind()` function
@@ -117,12 +117,12 @@ Transformations
 
 6. Appropriately labels the data set with descriptive variable names
     - `activityID` is eliminate
-    - All `Acc` in column’s name replaced by `Accelerometer`
-    - All `Gyro` in column’s name replaced by `Gyroscope`
-    - All `BodyBody` in column’s name replaced by `Body`
-    - All `Mag` in column’s name replaced by `Magnitude`
-    - All start with character `f` in column’s name replaced by `Frequency`
-    - All start with character `t` in column’s name replaced by `Time`
+    - All `Acc` in column's name replaced by `Accelerometer`
+    - All `Gyro` in column's name replaced by `Gyroscope`
+    - All `BodyBody` in column's name replaced by `Body`
+    - All `Mag` in column's name replaced by `Magnitude`
+    - All start with character `f` in column's name replaced by `Frequency`
+    - All start with character `t` in column's name replaced by `Time`
 
 7. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
     - `FinalData` (180 rows, 88 columns) is created by sumarizing `data_merge` taking the means of each variable for each activity and each subject, after groupped by subject and activity.
@@ -139,7 +139,7 @@ Copied from README.txt in original dataset.
 > ==================================================================
 > Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 > Smartlab - Non Linear Complex Systems Laboratory
-> DITEN - Università degli Studi di Genova.
+> DITEN - Universit� degli Studi di Genova.
 > Via Opera Pia 11A, I-16145, Genoa, Italy.
 > activityrecognition@smartlab.ws
 > www.smartlab.ws
@@ -203,3 +203,4 @@ Copied from README.txt in original dataset.
 > This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 > 
 > Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
+> 
